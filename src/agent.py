@@ -13,7 +13,7 @@ async def weather(city: str) -> str:
 
 async def agent(input: str) -> AsyncGenerator[str, None]:
     tools = await bl_tools(["blaxel-search"]).to_openai() + [weather]
-    model = await bl_model("gpt-4o-mini").to_openai()
+    model = await bl_model("sandbox-openai").to_openai()
 
     agent = Agent(
         name="blaxel-agent",
