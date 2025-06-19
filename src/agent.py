@@ -1,8 +1,7 @@
 from typing import AsyncGenerator
 
 from agents import Agent, RawResponsesStreamEvent, Runner, function_tool
-from blaxel.models import bl_model
-from blaxel.tools import bl_tools
+from blaxel.openai import bl_model, bl_tools
 from openai.types.responses import ResponseTextDeltaEvent
 
 
@@ -11,9 +10,10 @@ async def weather(city: str) -> str:
     """Get the weather in a given city"""
     return f"The weather in {city} is sunny"
 
+
 async def agent(input: str) -> AsyncGenerator[str, None]:
-    tools = await bl_tools(["blaxel-search"]).to_openai() + [weather]
-    model = await bl_model("sandbox-openai").to_openai()
+    tools = await bl_tools(["blaxel-search"]) + [weather]
+    model = await bl_model("sandbox-openai")
 
     agent = Agent(
         name="blaxel-agent",
@@ -23,5 +23,7 @@ async def agent(input: str) -> AsyncGenerator[str, None]:
     )
     result = Runner.run_streamed(agent, input)
     async for event in result.stream_events():
-        if isinstance(event, RawResponsesStreamEvent) and isinstance(event.data, ResponseTextDeltaEvent):
+        if isinstance(event, RawResponsesStreamEvent) and isinstance(
+            event.data, ResponseTextDeltaEvent
+        ):
             yield event.data.delta
