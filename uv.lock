@@ -1,14 +1,14 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.10"
 resolution-markers = [
-    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
-    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
-    "python_full_version < '3.11'",
     "python_full_version >= '3.14' and sys_platform == 'win32'",
     "python_full_version >= '3.14' and sys_platform != 'win32'",
     "python_full_version == '3.13.*' and sys_platform == 'win32'",
     "python_full_version == '3.13.*' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
+    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
+    "python_full_version < '3.11'",
 ]
 
 [[package]]
@@ -124,11 +124,11 @@ telemetry = [
 
 [[package]]
 name = "certifi"
-version = "2025.1.31"
+version = "2026.10.23"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz", hash = "sha256:3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651", size = 167577, upload-time = "2025-01-31T02:16:47.166Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz", hash = "sha256:a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd", size = 136225, upload-time = "2026-10-23T11:36:16.478Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/38/fc/bce832fd4fd99766c04d1ee0eead6b0ec6486fb100ae5e74c1d91292b982/certifi-2025.1.31-py3-none-any.whl", hash = "sha256:ca78db4565a652026a4db2bcdf68f2fb589ea80d0be70e03929ed730746b84fe", size = 166393, upload-time = "2025-01-31T02:16:45.015Z" },
+    { url = "https://files.pythonhosted.org/packages/32/d1/a3652fe2c19134d0d15922177821d863cbd7e842d53a21bbe7e8e3a1b5ac/certifi-2026.10.23-py3-none-any.whl", hash = "sha256:e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1", size = 135082, upload-time = "2026-10-23T11:36:14.763Z" },
 ]
 
 [[package]]
@@ -404,11 +404,31 @@ wheels = [
 
 [[package]]
 name = "dnspython"
-version = "2.7.0"
+version = "2.8.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b5/4a/263763cb2ba3816dd94b08ad3a33d5fdae34ecb856678773cc40a3605829/dnspython-2.7.0.tar.gz", hash = "sha256:ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1", size = 345197, upload-time = "2024-10-05T20:14:59.362Z" }
+resolution-markers = [
+    "python_full_version < '3.11'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8c/8b/57666417c0f90f08bcafa776861060426765fdb422eb10212086fb811d26/dnspython-2.8.0.tar.gz", hash = "sha256:181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f", size = 368251, upload-time = "2025-09-07T18:58:00.022Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/68/1b/e0a87d256e40e8c888847551b20a017a6b98139178505dc7ffb96f04e954/dnspython-2.7.0-py3-none-any.whl", hash = "sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86", size = 313632, upload-time = "2024-10-05T20:14:57.687Z" },
+    { url = "https://files.pythonhosted.org/packages/ba/5a/18ad964b0086c6e62e2e7500f7edc89e3faa45033c71c1893d34eed2b2de/dnspython-2.8.0-py3-none-any.whl", hash = "sha256:01d9bbc4a2d76bf0db7c1f729812ded6d912bd318d3b1cf81d30c0f845dbf3af", size = 331094, upload-time = "2025-09-07T18:57:58.071Z" },
+]
+
+[[package]]
+name = "dnspython"
+version = "2.9.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and sys_platform != 'win32'",
+    "python_full_version == '3.13.*' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
+    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ef/4a/50822184bd67cc6493f0fb6a880749158fcd31ab3fa07409acfd91f9fc85/dnspython-2.9.0.tar.gz", hash = "sha256:b44dc6b18f07a8b1c56676a19fbfdb5209415b046a9cece286baafa87ff3f7f1", size = 423560, upload-time = "2026-10-09T00:07:24.352Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/10/02/cdcc9b7c051786a103c3b09e1003a82fa0c66bcb91ffbdabcfbf7b4163b9/dnspython-2.9.0-py3-none-any.whl", hash = "sha256:9a4aedb833c3c1b49214d04d44d3032ab7a9135f7c1d29a549b4ff78fd82fda9", size = 354822, upload-time = "2026-10-09T00:07:22.622Z" },
 ]
 
 [[package]]
@@ -425,7 +445,8 @@ name = "email-validator"
 version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "dnspython" },
+    { name = "dnspython", version = "2.8.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "dnspython", version = "2.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "idna" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/48/ce/13508a1ec3f8bb981ae4ca79ea40384becc868bfae97fd1c942bb3a001b1/email_validator-2.2.0.tar.gz", hash = "sha256:cb690f344c617a714f22e66ae771445a1ceb46821152df8e165c5f9a364582b7", size = 48967, upload-time = "2024-06-20T11:30:30.034Z" }
@@ -690,12 +711,12 @@ name = "griffelib"
 version = "2.3.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
-    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
     "python_full_version >= '3.14' and sys_platform == 'win32'",
     "python_full_version >= '3.14' and sys_platform != 'win32'",
     "python_full_version == '3.13.*' and sys_platform == 'win32'",
     "python_full_version == '3.13.*' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
+    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/2b/27/b55f1a5278918be765fb2fd8b20966bc72bbdd3f789f031937cceea7834a/griffelib-2.3.2.tar.gz", hash = "sha256:df00c7a0dee3d86268d76788997a1859272cb1fb7b865658e043d2c0c3d52e60", size = 234729, upload-time = "2026-10-06T09:54:37.222Z" }
 wheels = [
@@ -707,11 +728,11 @@ name = "grpcio"
 version = "1.71.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
+    "python_full_version == '3.13.*' and sys_platform == 'win32'",
+    "python_full_version == '3.13.*' and sys_platform != 'win32'",
     "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
     "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
     "python_full_version < '3.11'",
-    "python_full_version == '3.13.*' and sys_platform == 'win32'",
-    "python_full_version == '3.13.*' and sys_platform != 'win32'",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1c/95/aa11fc09a85d91fbc7dd405dcb2a1e0256989d67bf89fa65ae24b3ba105a/grpcio-1.71.0.tar.gz", hash = "sha256:2b85f7820475ad3edec209d3d89a7909ada16caab05d3f2e08a7e8ae3200a55c", size = 12549828, upload-time = "2025-03-10T19:28:49.203Z" }
 wheels = [
@@ -766,7 +787,7 @@ resolution-markers = [
     "python_full_version >= '3.14' and sys_platform != 'win32'",
 ]
 dependencies = [
-    { name = "typing-extensions", marker = "python_full_version >= '3.14'" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3f/4f/4435c0aae54657258d9cfcba78598f3d9e5fe4c82ff18d78558567b90faf/grpcio-1.84.0.tar.gz", hash = "sha256:19aaf172fc2edbefccce3f6e92c5150975dbe56c45744e9e87cf72ebdf85bfbe", size = 13493876, upload-time = "2026-09-14T06:59:33.291Z" }
 wheels = [
@@ -859,8 +880,8 @@ name = "httpcore2"
 version = "2.13.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "h11", marker = "python_full_version != '3.12.*' or sys_platform != 'emscripten'" },
-    { name = "truststore", marker = "python_full_version != '3.12.*' or sys_platform != 'emscripten'" },
+    { name = "h11" },
+    { name = "truststore" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cb/f3/1db7aa2bc2524062192bb0e0323969492d1883152a232fe36eea65f4e35c/httpcore2-2.13.1.tar.gz", hash = "sha256:e0aa977abe17e69a3b820a24542a6fa88702676d83880b8d194dcd18408e5103", size = 68071, upload-time = "2026-09-23T07:47:22.372Z" }
 wheels = [
@@ -1789,11 +1810,11 @@ wheels = [
 
 [[package]]
 name = "pygments"
-version = "2.19.1"
+version = "2.21.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f", size = 4968581, upload-time = "2025-01-06T17:26:30.443Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz", hash = "sha256:610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c", size = 5005329, upload-time = "2026-08-17T08:02:48.824Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293, upload-time = "2025-01-06T17:26:25.553Z" },
+    { url = "https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl", hash = "sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9", size = 1250147, upload-time = "2026-08-17T08:02:44.912Z" },
 ]
 
 [[package]]
@@ -1827,11 +1848,11 @@ wheels = [
 
 [[package]]
 name = "python-dotenv"
-version = "1.1.0"
+version = "1.2.4"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/88/2c/7bb1416c5620485aa793f2de31d3df393d3686aa8a8506d11e10e13c5baf/python_dotenv-1.1.0.tar.gz", hash = "sha256:41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5", size = 39920, upload-time = "2025-03-25T10:14:56.835Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/74/26/2fbeedb218a787a5eea551c7532cac4e009f83d689dd2faa0d0353473f86/python_dotenv-1.2.4.tar.gz", hash = "sha256:f0d53e69935a851c0dcc78f3ab7aaccd8cabef0b92382b576b824212902873c0", size = 60824, upload-time = "2026-10-01T05:36:10Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/18/98a99ad95133c6a6e2005fe89faedf294a748bd5dc803008059409ac9b1e/python_dotenv-1.1.0-py3-none-any.whl", hash = "sha256:d7c01d9e2293916c18baf562d95698754b0dbbb5e74d457c45d4f6561fb9d55d", size = 20256, upload-time = "2025-03-25T10:14:55.034Z" },
+    { url = "https://files.pythonhosted.org/packages/60/d1/38f3a3405989a89ac18390803e70c6ad7c7760da4f9b83cbeca0c44a0c72/python_dotenv-1.2.4-py3-none-any.whl", hash = "sha256:42269a8a5b3fd54ffa6f3d84b18abed50064717576b4ecf03dc4a55d8aa04fdc", size = 23266, upload-time = "2026-10-01T05:36:08.633Z" },
 ]
 
 [[package]]
@@ -1929,7 +1950,7 @@ wheels = [
 
 [[package]]
 name = "requests"
-version = "2.32.3"
+version = "2.34.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
@@ -1937,9 +1958,9 @@ dependencies = [
     { name = "idna" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz", hash = "sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760", size = 131218, upload-time = "2024-05-29T15:37:49.536Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz", hash = "sha256:f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed", size = 142856, upload-time = "2026-05-14T19:25:27.735Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl", hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6", size = 64928, upload-time = "2024-05-29T15:37:47.027Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl", hash = "sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0", size = 73075, upload-time = "2026-05-14T19:25:26.443Z" },
 ]
 
 [[package]]
@@ -2248,12 +2269,12 @@ name = "rpds-py"
 version = "2026.9.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
-    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
     "python_full_version >= '3.14' and sys_platform == 'win32'",
     "python_full_version >= '3.14' and sys_platform != 'win32'",
     "python_full_version == '3.13.*' and sys_platform == 'win32'",
     "python_full_version == '3.13.*' and sys_platform != 'win32'",
+    "python_full_version == '3.12.*' and sys_platform == 'emscripten'",
+    "(python_full_version >= '3.11' and python_full_version < '3.13' and sys_platform != 'emscripten') or (python_full_version == '3.11.*' and sys_platform == 'emscripten')",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/68/3bd46b8a5e01d3c2ebdf9c5e9497912e3fe0cde02bac21a7130ca866e403/rpds_py-2026.9.1.tar.gz", hash = "sha256:4793ef7f78268b124b73fa933440f01d258bbae01de9fa53e9080c9ab0425a12", size = 63948, upload-time = "2026-10-04T16:32:36.469Z" }
 wheels = [
